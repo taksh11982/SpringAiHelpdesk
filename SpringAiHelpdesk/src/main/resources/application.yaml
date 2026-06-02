@@ -1,0 +1,35 @@
+  spring:
+    application:
+      name: "SpringAiHelpdeskApplication"
+    datasource:
+      url: jdbc:mysql://localhost:3307/springai
+      username: root
+      password: Siaan@2005
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+    ai:
+      openai:
+        api-key: ${SPRING_AI_APIKEY}
+        base-url: https://api.groq.com/openai
+        chat:
+          options:
+            model: openai/gpt-oss-20b
+      chat:
+        memory:
+          repository:
+            jdbc:
+              initialize-schema: always
+
+
+  #database configuration
+  logging:
+    level:
+      org:
+        springframework:
+          ai:
+            chat:
+              client:
+                advisor: DEBUG
+
