@@ -56,3 +56,13 @@ Where to look
 License
 
 This repo is a personal prototype — add a license if you plan to publish it.
+
+Technologies
+
+- Java 25, Spring Boot 4
+- Spring AI (spring-ai BOM + chat memory + OpenAI model connectors) used in the backend (`AiService`, `AiController`, `TicketDatabaseTool`)
+- Reactor / Project Reactor (Flux streaming responses)
+- MySQL (JDBC + Spring Data JPA)
+- Maven build
+- Frontend: React 19, Vite, Tailwind CSS + shadcn UI primitives
+- Optional: OpenAI-compatible provider configured via `SPRING_AI_APIKEY` and `application.yaml`
